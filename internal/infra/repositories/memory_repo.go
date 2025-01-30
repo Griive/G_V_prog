@@ -2,6 +2,8 @@ package repositories
 
 import (
 	"errors"
+
+	"main.go/internal/app/workout/entities"
 )
 
 type MemoryProgramRepo struct {

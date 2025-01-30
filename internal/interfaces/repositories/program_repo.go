@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"entities"
+	"main.go/internal/app/workout/entities"
 )
 
 type ProgramRepository interface {

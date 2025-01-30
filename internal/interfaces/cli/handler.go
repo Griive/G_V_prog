@@ -2,11 +2,13 @@ package cli
 
 import (
 	"context"
+
+	"main.go/internal/app/workout/usecases"
 )
 
 type CLIHandler struct {
-	workoutUC *usercases.WorkoutUseCase
-	timerUC   *usercases.TimerUseCase
+	workoutUC *usecases.TimerUseCase //*usercases.WorkoutUseCase
+	timerUC   *usecases.TimerUseCase
 	writer    Writer
 }
 
@@ -16,7 +18,7 @@ type Writer interface {
 	ReadLine() (string, error)
 }
 
-func NewCLIHandler(uc *usercases.WorkoutUseCase, writer Writer) *CLIHandler {
+func NewCLIHandler(uc *usecases.WorkoutUseCase, writer Writer) *CLIHandler {
 	return &CLIHandler{workoutUC: uc, writer: writer}
 }
 

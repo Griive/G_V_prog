@@ -3,6 +3,9 @@ package usecases
 import (
 	"context"
 	"fmt"
+
+	"main.go/internal/app/workout/entities"
+	"main.go/internal/interfaces/repositories"
 )
 
 type WorkoutUseCase struct {
